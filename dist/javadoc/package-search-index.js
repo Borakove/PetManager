@@ -1,1 +1,1 @@
-packageSearchIndex = [{"l":"All Packages","u":"allpackages-index.html"}];updateSearchResults();
+packageSearchIndex = [{"l":"All Packages","u":"allpackages-index.html"},{"l":"modelodesktop.petmanager.controller"},{"l":"modelodesktop.petmanager.model"},{"l":"modelodesktop.petmanager.view"}];updateSearchResults();
