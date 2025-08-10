@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox alignment="TOP_CENTER" maxHeight="-Infinity" maxWidth="-Infinity" prefWidth="400.0" spacing="15.0" styleClass="root" stylesheets="@../css/styles.css" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.petmanager.controller.DialogClienteController">
+    <padding>
+        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+    </padding>
+    <children>
+        <Label fx:id="tituloLabel" styleClass="titulo-label" text="Novo Cliente" />
+        <VBox spacing="5.0">
+            <children>
+                <Label text="Nome Completo:" />
+                <TextField fx:id="nomeField" promptText="Nome do cliente" />
+            </children>
+        </VBox>
+        <VBox spacing="5.0">
+            <children>
+                <Label text="Telefone:" />
+                <TextField fx:id="telefoneField" promptText="(XX) XXXXX-XXXX" />
+            </children>
+        </VBox>
+        <VBox spacing="5.0">
+            <children>
+                <Label text="Email:" />
+                <TextField fx:id="emailField" promptText="email@exemplo.com" />
+            </children>
+        </VBox>
+        <Label fx:id="mensagemLabel" />
+        <HBox alignment="CENTER" spacing="20.0">
+            <children>
+                <Button onAction="#handleSalvarAction" prefWidth="120.0" text="Salvar" />
+                <Button onAction="#handleCancelarAction" prefWidth="120.0" style="-fx-background-color: #6c757d;" text="Cancelar" />
+            </children>
+            <VBox.margin>
+                <Insets top="10.0" />
+            </VBox.margin>
+        </HBox>
+    </children>
+</VBox>

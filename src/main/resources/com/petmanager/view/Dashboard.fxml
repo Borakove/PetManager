@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane prefHeight="600.0" prefWidth="1000.0" styleClass="root" stylesheets="@../css/styles.css" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.petmanager.controller.DashboardController">
+    <top>
+        <fx:include source="Header.fxml" />
+    </top>
+    <center>
+        <VBox alignment="TOP_CENTER" spacing="20.0" BorderPane.alignment="CENTER">
+            <padding>
+                <Insets bottom="20.0" left="40.0" right="40.0" top="20.0" />
+            </padding>
+            <children>
+                <Label fx:id="bemVindoLabel" styleClass="titulo-label" text="Painel de Controle" />
+
+                <HBox alignment="CENTER" spacing="30.0">
+                    <children>
+                        <VBox alignment="CENTER" style="-fx-background-color: white; -fx-padding: 20; -fx-background-radius: 10;">
+                            <children>
+                                <Label text="Clientes Cadastrados"><font><Font name="System Bold" size="14.0" /></font></Label>
+                                <Label fx:id="clientesCountLabel" text="0"><font><Font name="System Bold" size="24.0" /></font></Label>
+                            </children>
+                        </VBox>
+                        <VBox alignment="CENTER" style="-fx-background-color: white; -fx-padding: 20; -fx-background-radius: 10;">
+                            <children>
+                                <Label text="Pets Cadastrados"><font><Font name="System Bold" size="14.0" /></font></Label>
+                                <Label fx:id="petsCountLabel" text="0"><font><Font name="System Bold" size="24.0" /></font></Label>
+                            </children>
+                        </VBox>
+                        <VBox alignment="CENTER" style="-fx-background-color: white; -fx-padding: 20; -fx-background-radius: 10;">
+                            <children>
+                                <Label text="Agendamentos para Hoje"><font><Font name="System Bold" size="14.0" /></font></Label>
+                                <Label fx:id="agendamentosHojeLabel" text="0"><font><Font name="System Bold" size="24.0" /></font></Label>
+                            </children>
+                        </VBox>
+                    </children>
+                </HBox>
+
+                <HBox alignment="CENTER" spacing="20.0">
+                    <VBox.margin>
+                        <Insets top="30.0" />
+                    </VBox.margin>
+                    <children>
+                        <Button mnemonicParsing="false" prefHeight="80.0" prefWidth="200.0" text="Nova Venda (PDV)" />
+                        <Button mnemonicParsing="false" prefHeight="80.0" prefWidth="200.0" text="Gerenciar Clientes" />
+                        <Button mnemonicParsing="false" prefHeight="80.0" prefWidth="200.0" text="Gerenciar Produtos" />
+                    </children>
+                </HBox>
+            </children>
+        </VBox>
+    </center>
+</BorderPane>
